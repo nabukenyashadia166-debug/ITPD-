@@ -1,0 +1,237 @@
+/* Shared finishing touches for the Campus Lost & Found pages. */
+:root {
+    --lf-ink: #253247;
+    --lf-muted: #667085;
+    --lf-radius: 0.85rem;
+}
+
+body {
+    color: var(--lf-ink);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.55;
+}
+
+main {
+    min-width: 0;
+}
+
+.login-shell {
+    max-width: 60rem;
+}
+
+.login-photo-panel {
+    min-height: 16rem;
+}
+
+.register-photo-title {
+    word-spacing: 0.2em;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.55);
+}
+
+.dashboard-page {
+    background-color: #eef3f7;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.84)), url("images/download.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.dashboard-menu-logo {
+    width: 5.25rem;
+    height: 5.25rem;
+    padding: 0.25rem;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+@media (min-width: 992px) {
+    .student-dashboard-sidebar {
+        min-height: 100vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .login-photo-panel {
+        min-height: 100%;
+    }
+}
+
+.card {
+    border-radius: var(--lf-radius);
+}
+
+.card-header:first-child {
+    border-top-left-radius: var(--lf-radius);
+    border-top-right-radius: var(--lf-radius);
+}
+
+.form-label {
+    color: var(--lf-ink);
+    font-weight: 500;
+}
+
+.form-control,
+.form-select {
+    border-radius: 0.55rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.btn {
+    border-radius: 0.55rem;
+}
+
+.table > :not(caption) > * > * {
+    vertical-align: middle;
+}
+
+.text-secondary,
+.text-muted {
+    color: var(--lf-muted) !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+::selection {
+    background: rgba(13, 110, 253, 0.18);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .btn,
+    .nav-link,
+    .card {
+        transition: box-shadow 160ms ease, transform 160ms ease;
+    }
+
+    .card:hover {
+        transform: translateY(-1px);
+    }
+}
+
+/* Keep content comfortable on tablets and phones. */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img,
+video,
+canvas {
+    max-width: 100%;
+}
+
+video {
+    height: auto;
+}
+
+.table-responsive {
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive > .table {
+    min-width: 38rem;
+}
+
+@media (max-width: 767.98px) {
+    aside[class*="col-md-"] {
+        min-height: auto !important;
+    }
+
+    aside .nav.flex-column {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+
+    aside .nav-item {
+        flex: 1 1 9rem;
+    }
+
+    aside .nav-link {
+        height: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    aside h6 {
+        margin-bottom: 0.75rem !important;
+    }
+
+    main[class*="p-4"] {
+        padding: 1.25rem !important;
+    }
+
+    .container.py-5,
+    main.container {
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
+    }
+
+    .navbar .navbar-brand {
+        max-width: calc(100% - 4rem);
+        white-space: normal;
+    }
+
+    .table-responsive > .table {
+        min-width: 36rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    h1,
+    .h1 {
+        font-size: 1.65rem;
+    }
+
+    h2,
+    .h2 {
+        font-size: 1.4rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .btn-group,
+    .d-flex > .btn,
+    .d-flex > a.btn {
+        max-width: 100%;
+    }
+
+    .form-control,
+    .form-select,
+    .btn {
+        font-size: 1rem;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+    }
+
+    .table-responsive > .table {
+        min-width: 34rem;
+    }
+}
+
+/* Shared image treatment for content pages (auth and main dashboard retain their own styling). */
+.site-image-background {
+    min-height: 100vh;
+    background: linear-gradient(rgba(245, 248, 252, 0.88), rgba(245, 248, 252, 0.88)), url('images/download.jpg') center / cover fixed;
+}
+
+.site-brand-logo {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: 0.5rem;
+    object-fit: contain;
+    vertical-align: middle;
+    border-radius: 50%;
+}
