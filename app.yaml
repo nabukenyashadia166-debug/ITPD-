@@ -3,3 +3,5 @@ name: campus-lost-and-found
 owner: nabukenya166
 package: .
 app_id: da_nVEIoteUADBX
+env:
+  MYSQL_ATTR_SSL_CA: /app/isrgrootx1.pem
